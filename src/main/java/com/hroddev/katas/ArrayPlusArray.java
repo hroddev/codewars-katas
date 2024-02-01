@@ -5,11 +5,8 @@ import java.util.stream.IntStream;
 public class ArrayPlusArray {
 
     public static int arrayPlusArray(int[] arr1, int[] arr2) {
-        // concatenate arr1 and arr2
-        int[] bothArr = IntStream.concat(IntStream.of(arr1), IntStream.of(arr2)).toArray();
-
-        // sum number of the bothArr
-        return IntStream.of(bothArr).sum();
+        // sum the numbers of the arrays directly
+        return IntStream.of(arr1).sum() + IntStream.of(arr2).sum();
     }
 
     public static void main(String[] args) {
